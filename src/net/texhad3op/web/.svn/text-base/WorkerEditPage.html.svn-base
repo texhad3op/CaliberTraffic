@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:wicket>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>EventEditPage</title>
+<link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+<body>
+<wicket:extend>
+	<table border="0">
+		<tr>
+			<td width="50%" valign="top">
+			<form wicket:id="form" name="editForm">
+			<table border="1">
+				<tr>
+					<td>firstName</td>
+					<td><input type="text" wicket:id="firstName" /></td>
+				</tr>
+				<tr>
+					<td>lastName</td>
+					<td><input type="text" wicket:id="lastName" /></td>
+				</tr>
+				<tr>
+					<td>description</td>
+					<td><input type="text" wicket:id="description" /></td>
+				</tr>
+				<tr>
+					<td>userLogin</td>
+					<td><input type="text" wicket:id="userLogin" /></td>
+				</tr>
+				<tr>
+					<td>userPassword</td>
+					<td><input type="text" wicket:id="userPassword" /></td>
+				</tr>				
+				<tr>
+					<td>type</td>
+					<td><select wicket:id="type" /></td>
+				</tr>
+				<tr>
+					<td>isBlocked</td>
+					<td><input type="checkbox" wicket:id="isBlocked" /></td>
+				</tr>
+				<tr>
+					<td><input type="submit" value="save" /></td>
+				</tr>
+			</table>
+			</form>
+			</td>
+		</tr>
+	</table>
+
+</wicket:extend>
+</body>
+</html>
