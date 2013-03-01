@@ -9,7 +9,9 @@ import org.apache.wicket.markup.html.resources.StyleSheetReference;
 
 public abstract class BaseWebPage extends BasePage {
 	public BaseWebPage(){
-        add(new StyleSheetReference("stylesheet", BasePage.class, "style.css"));
+		add(new StyleSheetReference("stylesheet", BasePage.class, "style.css"));
+		add(new StyleSheetReference("stylesheet2", BasePage.class,
+				"css/bootstrap.min.css"));
 		if(null == getCaliberTrafficSession().getWorker()) setResponsePage(LoginPage.class);
 		add(new Label("logged", getCaliberTrafficSession().getWorker().getFirstName()+" "+getCaliberTrafficSession().getWorker().getLastName()));
 		add(new Link<Worker>("logout"){

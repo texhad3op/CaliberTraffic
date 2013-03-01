@@ -1,60 +1,70 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
-<html>
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:wicket>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<link wicket:id='stylesheet' />
+<title>CaliberTraffic</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link wicket:id='stylesheet' />
+	<link wicket:id='stylesheet2' media="screen" />
 </head>
 <body>
-<div id="container">
-<div id="header">
-<table width="100%" class="ordinary">
-	<tr>
-		<td class="ordinary" align="left">
-		<div>Vartotojas:<span wicket:id="logged"></span></div>
-		</td>
-		<td class="ordinary" align="right">
-		<div><a wicket:id="logout" href="#">atsijunti</a></div>
-		</td>
-	</tr>
-</table>
+    <script src="http://code.jquery.com/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
 
-
+<div class="navbar navbar-inverse nav">
+    <div class="navbar-inner">
+        <div class="container">
+            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </a>
+            <div class="brand" >Vartotojas:<span wicket:id="logged"></span></div>
+			
+          	<div class="nav-collapse collapse">
+              <ul class="nav">
+                  <li class="divider-vertical"></li>
+                  <li><a href="#"><i class="icon-home icon-white"></i> Home</a></li>
+              </ul>
+              <div class="pull-right">
+                <ul class="nav pull-right"><a href="#" class="nav-header" wicket:id="logout">Atsijunti</a></ul>
+              </div>
+            </div>
+        </div>
+    </div>
 </div>
-<div id="leftBar">
-
-<div class="accordion"><span id="leftMenuPanel">
-
-<div class="menuPunkt active"><wicket:container
-	wicket:id="general" /></div>
-<div class="menuPunkt active"><wicket:container
-	wicket:id="trafficByWorker" /></div>
-<div class="menuPunkt active"><wicket:container
-	wicket:id="trafficByCaliber" /></div>
-<div class="menuPunkt active">
-<wicket:container
-	wicket:id="calibersChecking" />
-	</div>	
-<div class="menuPunkt active">	
-<wicket:container
-	wicket:id="workers" />	
-	</div>
-	
-<div class="menuPunkt active">	
-<wicket:container
-	wicket:id="calibers" />	
-	</div>	
-	
-<div class="menuPunkt active">	
-<wicket:container
-	wicket:id="orders" />	
-	</div>
-</span></div>
 
 
+<div class="container-fluid">
+  <div class="row-fluid">
+    <div class="span2">
+        <!-- menu start -->
 
+    
+<ul class="nav nav-list">
+  <li class="nav-header">Meniu</li>
+  <li><wicket:container wicket:id="general" /></li>
+  <li><wicket:container	wicket:id="trafficByWorker" /></li>
+  <li><wicket:container	wicket:id="trafficByCaliber" /></li>
+  <li><wicket:container	wicket:id="calibersChecking" />	</li>	
+  <li><wicket:container	wicket:id="workers" />		</li>
+  <li><wicket:container	wicket:id="calibers" />		</li>	
+  <li><wicket:container	wicket:id="orders" />	</li>
+  
+  
+    <!-- menu finish -->
+</ul>    
+    
+
+    </div>
+    <div class="span10">
+        <!-- body start -->
+    <wicket:child />
+        <!-- body finish -->
+    </div>
+  </div>
 </div>
-<div id="content"><wicket:child /></div>
-<div id="footer">Footer</div>
-</div>
+
 </body>
 </html>

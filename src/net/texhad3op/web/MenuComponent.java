@@ -27,8 +27,8 @@ public class MenuComponent extends Panel {
 		WebMarkupContainer targetDiv = new WebMarkupContainer("targetDiv");
 		add(targetDiv);
 		targetDiv.add(link);
-		link.add(new SimpleAttributeModifier("style",
-				getCaliberTrafficSession().getSelectedMenuPunkt().equals(id_) ? "background-color:#aaaaaa;" : "background-color:#20678A;"));
+		targetDiv.add(new SimpleAttributeModifier("class",
+				getCaliberTrafficSession().getSelectedMenuPunkt().equals(id_) ? "active" : ""));
 	}
 
 	public void onClick2() {
