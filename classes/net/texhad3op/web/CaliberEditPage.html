@@ -8,63 +8,110 @@
 </head>
 <body>
 <wicket:extend>
-	<table border="0">
-		<tr>
-			<td width="50%" valign="top">
-			<form wicket:id="form" name="editForm">
-			<table border="1">
-				<tr>
-					<td>Pavadinimas</td>
-					<td><input type="text" wicket:id="deviceNr" /></td>
-				</tr>
-				<tr>
-					<td>Aprašymas</td>
-					<td><textarea wicket:id="description"></textarea></td>
-				</tr>				
-				<tr>
-					<td>Nominal</td>
-					<td><input type="text" wicket:id="measurementNominal" /></td>
-				</tr>
-				<tr>
-					<td>Tolerancija</td>
-					<td><input type="text" wicket:id="measurementTolerance" /></td>
-				</tr>
-				<tr>
-					<td>Minimalus</td>
-					<td><input type="text" wicket:id="minCaliber" /></td>
-				</tr>
-				<tr>
-					<td>Maximalus</td>
-					<td><input type="text" wicket:id="maxCaliber" /></td>
-				</tr>
-				<tr>
-					<td>Vieta</td>
-					<td><input type="text" wicket:id="holdPlace" /></td>
-				</tr>
-				<tr>
-					<td>Griovelis</td>
-					<td><input type="text" wicket:id="holdSubPlace" /></td>
-				</tr>
-				<tr>
-					<td>Ar ilgas?</td>
-					<td><input type="checkbox" wicket:id="isLongType" /></td>
-				</tr>
-				<tr>
-					<td>Ar patikrintas?</td>
-					<td><input type="checkbox" wicket:id="isActive" /></td>
-				</tr>
-				<tr>
-					<td>Data</td>
-					<td><input type="text" wicket:id="nextCheckingTime" /></td>
-				</tr>
-				<tr>
-					<td><input type="submit" value="save" /></td>
-				</tr>
-			</table>
-			</form>
-			</td>
-		</tr>
-	</table>
+
+<form class="form-horizontal" wicket:id="form" method="POST">
+  <fieldset>
+    <div class="control-group">
+      <!-- Username -->
+      <label class="control-label"  for="username">Pavadinimas</label>
+      <div class="controls">
+        <input type="text" wicket:id="deviceNr" placeholder="" class="input-xlarge" />
+      </div>
+    </div>
+ 
+    <div class="control-group">
+      <!-- E-mail -->
+      <label class="control-label" for="email">Aprašymas</label>
+      <div class="controls">
+      <textarea wicket:id="description" class="input-xlarge"></textarea>
+      </div>
+    </div>
+ 
+    <div class="control-group">
+      <!-- Password-->
+      <label class="control-label" for="password">Nominal</label>
+      <div class="controls">
+        <input type="text" wicket:id="measurementNominal" placeholder="" class="input-xlarge" />
+      </div>
+    </div>
+ 
+
+     <div class="control-group">
+      <!-- E-mail -->
+      <label class="control-label" for="email">Tolerancija</label>
+      <div class="controls">
+        <input type="text" wicket:id="measurementTolerance" placeholder="" class="input-xlarge" />
+      </div>
+    </div>
+
+    <div class="control-group">
+      <!-- E-mail -->
+      <label class="control-label" for="email">Minimalus</label>
+      <div class="controls">
+        <input type="text" wicket:id="minCaliber" placeholder="" class="input-xlarge" />
+      </div>
+    </div>
+    
+      <div class="control-group">
+      <!-- E-mail -->
+      <label class="control-label" for="email">Maximalus</label>
+      <div class="controls">
+        <input type="text" wicket:id="maxCaliber" placeholder="" class="input-xlarge" />
+      </div>
+    </div> 
+
+    <div class="control-group">
+      <!-- E-mail -->
+      <label class="control-label" for="email">Vieta</label>
+      <div class="controls">
+        <input type="text" wicket:id="holdPlace" placeholder="" class="input-xlarge" />
+      </div>
+    </div> 
+ 
+    <div class="control-group">
+      <!-- E-mail -->
+      <label class="control-label" for="email">Griovelis</label>
+      <div class="controls">
+        <input type="text" wicket:id="holdSubPlace" placeholder="" class="input-xlarge" />
+      </div>
+    </div> 
+ 
+ 
+ 
+ 
+ 
+    <div class="control-group">
+      <!-- E-mail -->
+      <label class="control-label" for="email">Ar ilgas?</label>
+      <div class="controls">
+      <input type="checkbox" wicket:id="isLongType" class="input-xlarge" />
+      </div>
+    </div>  
+ 
+    <div class="control-group">
+      <!-- E-mail -->
+      <label class="control-label" for="email">Ar patikrintas?</label>
+      <div class="controls">
+      <input type="checkbox" wicket:id="isActive" class="input-xlarge" />
+      </div>
+    </div>  
+    
+    <div class="control-group">
+      <!-- E-mail -->
+      <label class="control-label" for="email">Data</label>
+      <div class="controls">
+        <input type="text" wicket:id="nextCheckingTime" placeholder="" class="input-xlarge" />
+      </div>
+    </div>     
+ 
+    <div class="control-group">
+      <!-- Button -->
+      <div class="controls">
+        <button class="btn btn-success">Save</button>
+      </div>
+    </div>
+  </fieldset>
+</form>
 
 </wicket:extend>
 </body>

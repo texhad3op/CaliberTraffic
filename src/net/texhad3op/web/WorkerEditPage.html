@@ -8,47 +8,78 @@
 </head>
 <body>
 <wicket:extend>
-	<table border="0">
-		<tr>
-			<td width="50%" valign="top">
-			<form wicket:id="form" name="editForm">
-			<table border="1">
-				<tr>
-					<td>firstName</td>
-					<td><input type="text" wicket:id="firstName" /></td>
-				</tr>
-				<tr>
-					<td>lastName</td>
-					<td><input type="text" wicket:id="lastName" /></td>
-				</tr>
-				<tr>
-					<td>description</td>
-					<td><input type="text" wicket:id="description" /></td>
-				</tr>
-				<tr>
-					<td>userLogin</td>
-					<td><input type="text" wicket:id="userLogin" /></td>
-				</tr>
-				<tr>
-					<td>userPassword</td>
-					<td><input type="text" wicket:id="userPassword" /></td>
-				</tr>				
-				<tr>
-					<td>type</td>
-					<td><select wicket:id="type" /></td>
-				</tr>
-				<tr>
-					<td>isBlocked</td>
-					<td><input type="checkbox" wicket:id="isBlocked" /></td>
-				</tr>
-				<tr>
-					<td><input type="submit" value="save" /></td>
-				</tr>
-			</table>
-			</form>
-			</td>
-		</tr>
-	</table>
+
+
+<form class="form-horizontal" wicket:id="form" method="POST">
+  <fieldset>
+    <div class="control-group">
+      <!-- Username -->
+      <label class="control-label"  for="username">firstName</label>
+      <div class="controls">
+        <input type="text" wicket:id="firstName" placeholder="" class="input-xlarge" />
+      </div>
+    </div>
+ 
+    <div class="control-group">
+      <!-- Password-->
+      <label class="control-label" for="password">lastName</label>
+      <div class="controls">
+        <input type="text" wicket:id="lastName" placeholder="" class="input-xlarge" />
+      </div>
+    </div>
+ 
+
+     <div class="control-group">
+      <!-- E-mail -->
+      <label class="control-label" for="email">description</label>
+      <div class="controls">
+        <input type="text" wicket:id="description" placeholder="" class="input-xlarge" />
+      </div>
+    </div>
+
+    <div class="control-group">
+      <!-- E-mail -->
+      <label class="control-label" for="email">userLogin</label>
+      <div class="controls">
+        <input type="text" wicket:id="userLogin" placeholder="" class="input-xlarge" />
+      </div>
+    </div>
+    
+      <div class="control-group">
+      <!-- E-mail -->
+      <label class="control-label" for="email">userPassword</label>
+      <div class="controls">
+        <input type="text" wicket:id="userPassword" placeholder="" class="input-xlarge" />
+      </div>
+    </div> 
+
+    <div class="control-group">
+      <!-- E-mail -->
+      <label class="control-label" for="email">Tipas</label>
+      <div class="controls">
+ 		<select wicket:id="type" class="input-xlarge" />       
+      </div>
+    </div> 
+ 
+ 
+    <div class="control-group">
+      <!-- E-mail -->
+      <label class="control-label" for="email">Ar blokuotas?</label>
+      <div class="controls">
+      <input type="checkbox" wicket:id="isBlocked" class="input-xlarge" />
+      </div>
+    </div>  
+ 
+    <div class="control-group">
+      <!-- Button -->
+      <div class="controls">
+        <button class="btn btn-success">Save</button>
+      </div>
+    </div>
+  </fieldset>
+</form>
+
+
 
 </wicket:extend>
 </body>
