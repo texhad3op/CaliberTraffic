@@ -2,27 +2,40 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns:wicket>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <title>CaliberTraffic</title>
-<link rel="stylesheet" type="text/css" href="style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link wicket:id='stylesheet' />
+	<link wicket:id='stylesheet2' media="screen" />
 </head>
 <body>
+    <script src="http://code.jquery.com/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
 <wicket:extend>
 <span wicket:id="selectedWorker">uu</span>
 
-	<table>
-		<tr bgcolor="#bbbbbb">
-			<td>Operacija</td>
-			<td>Data</td>
-			<td>Kalibras</td>
-		</tr>
-		<tr wicket:id="operationsList">
+<div class="well">
+    <table class="table">
+      <thead>
+        <tr>
+			<th>Operacija</th>
+			<th>Data</th>
+			<th>Kalibras</th>
+
+        </tr>
+      </thead>
+      <tbody>
+ 		<tr wicket:id="operationsList">
 			<td><span wicket:id="operationtype">uu</span></td>
 			<td><span wicket:id="registered">uu</span></td>
 			<td><span wicket:id="deviceNr">uu</span></td>
 					
-		</tr>
-	</table>
+		</tr>     
+          
+      </tbody>
+    </table>
+</div>
+
 </wicket:extend>
 </body>
 </html>
