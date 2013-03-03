@@ -37,7 +37,7 @@
 
 	<!-- The build classpath -->
 	<path id="build.classpath">
-		<fileset dir="${basedir}/lib">
+		<fileset dir="${basedir}/weblib">
 			<include name="*.jar" />
 		</fileset>
 	</path>
